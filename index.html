@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <h1>Hello World</h1> -->
+<!-- <p>I'm hosted with GitHub Pages. Yes I am.</p> -->
+<style>
+#outerdiv
+{
+   width:100%;
+   height:100vh;
+   overflow:scroll;
+   position:relative;
+}
+
+#inneriframe
+{
+   position:absolute;
+   top:-230px;
+   left:-180px;
+   width:1280px;
+   height:6000px;
+   pointer-events: none;
+}
+</style>
+<!-- <div>
+   <iframe src="https://mitsloan.hosted.panopto.com/Panopto/Pages/Home.aspx"></iframe>
+</div> -->
+
+<script type="text/javascript">
+   const XIVAPI = require('@xivapi/js')
+   const xiv = new XIVAPI({
+     private_key: 'dd99ed5955714446af9b6e5609e4978f66c15befc94446cab9a070376e454bbb',
+     snake_case: true
+   })
+   xiv.search("Shroud Cherry Sapling").then((response) => {
+      console.log(response)
+     // do something with the response
+   }).catch((error) => {
+      console.log(error)
+     // do something with the error
+   })
+</script>
+
+</body>
+</html>
